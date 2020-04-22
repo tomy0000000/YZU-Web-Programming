@@ -1,0 +1,212 @@
+:root {
+    --header-color: #FFD4D4;
+    --middle-color: #F2FFF2;
+    --side-color: #FFECC9;
+    --box-dimension: 100px;
+}
+
+:root {
+    /*https://coolors.co/e88873-ffd046-a8c256-5398be-363020*/
+    --player1-color: #5398BE;
+    --player2-color: #A8C256;
+    --player3-color: #E88873;
+    --player4-color: #FFD046;
+}
+:root {
+    /*https://color.adobe.com/zh/Rainbow-Easter-color-theme-10321928/*/
+    /*--player1-color: #0597D5;
+    --player2-color: #42DA43;
+    --player3-color: #EA2F83;
+    --player4-color: #EDD803;*/
+}
+:root {
+    /*https://color.adobe.com/zh/V1-Tropical-Fun-color-theme-10359868/*/
+    /*--player1-color: #00A7FF;
+    --player2-color: #4EEC6C;
+    --player3-color: #FF0053;
+    --player4-color: #FFEB34;*/
+}
+
+@font-face {
+    font-family: 'Kabel';
+    src:url('./media/kabel.ttf')  format('truetype');
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Kabel';
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+}
+
+/*-------------------------Page Structure----------------------*/
+
+.header, .footer {
+    background-color: var(--header-color);
+    height: calc((100% - 741px)/2);
+    text-align: center;
+    /*border: 1px solid black;*/
+}
+
+.row {
+    /*border: 1px solid black;*/
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.column {
+    float: left;
+    padding: 20px;
+    height: 741px;
+}
+
+.middle-col {
+    background-color: var(--middle-color);
+    width: fit-content;
+}
+
+.side-col {
+    background-color: var(--side-color);
+    width: calc((100% - 641px)/2);
+}
+
+#info-col {
+    /*border: 1px solid black;*/
+}
+
+#game-col {
+    position: relative;
+    /*border: 1px solid black;*/
+}
+#game-col #mvFig {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+}
+
+#record-col {
+    overflow: auto;
+    /*border: 1px solid black;*/
+}
+
+#record-col h1 {
+    text-align: center;
+    position: sticky;
+    top: 0px;
+    background: inherit;
+    padding-bottom: 30px;
+    padding-top: 45px;
+    margin: 0px;
+    /*border: 1px solid black;*/
+}
+
+/*-------------------------Tables-------------------------*/
+
+#info-tab {
+    width: -webkit-fill-available;
+    border-collapse: collapse;
+    /*border: 1px solid black;*/
+}
+#info-tab td {
+    height: 120px;
+    /*border: 1px solid black;*/
+}
+#info-tab tr:nth-child(1) {
+    color: var(--player1-color);
+}
+#info-tab tr:nth-child(2) {
+    color: var(--player2-color);
+}
+#info-tab tr:nth-child(3) {
+    color: var(--player3-color);
+}
+#info-tab tr:nth-child(4) {
+    color: var(--player4-color);
+}
+#info-tab .info-cel {
+    position: relative;
+    padding-left: 25px;
+    padding-right: 25px;
+    display: table-cell;
+    /*border: 1px solid black;*/
+}
+#info-tab .info-celfig {
+    vertical-align: middle;
+    /*border: 1px solid black;*/
+}
+#info-tab .info-celtxt {
+    width: 100%;
+    /*border: 1px solid black;*/
+}
+
+/*------------------------------*/
+
+#game-tab {
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+#game-tab h1, #game-tab p {
+    margin: 0px;
+}
+#game-tab td {
+    border: 1px solid black;
+    text-align: center;
+    padding: 10px;
+}
+#game-tab td.h-def {
+    height: var(--box-dimension);
+}
+#game-tab td.w-def {
+    width: var(--box-dimension);
+}
+#game-tab td.h-big {
+    /*height: 75px;*/
+    height: calc(var(--box-dimension) * 0.75);
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+#game-tab td.w-big {
+    width: calc(var(--box-dimension) * 0.75);
+    padding-left: 0px;
+    padding-right: 0px;
+}
+#game-tab td.h-small {
+    height: calc(var(--box-dimension) * 0.25);
+    padding: 0px;
+}
+#game-tab td.w-small {
+    width: calc(var(--box-dimension) * 0.25);
+    padding: 0px;
+}
+#game-tab td.b-dismiss {
+    border: 0px;
+}
+#game-tab #box5 {
+    border-top: 0px;
+    border-right: 0px;
+}
+#game-tab #box10 {
+    border-bottom: 0px;
+    border-right: 0px;
+}
+#game-tab #box15 {
+    border-bottom: 0px;
+    border-left: 0px;
+}
+#game-tab img {
+    display: initial;
+    margin: auto;
+    max-height: 32px;
+    max-width: 32px;
+}
+#game-tab #diceImg {
+    max-width: fit-content;
+    max-height: fit-content;
+}

@@ -1,0 +1,54 @@
+.wrapper { 
+  flex-flow: row wrap;
+  font-weight: bold;
+  text-align: center;
+  margin:130px auto;
+}
+
+.wrapper > * {
+  padding: 10px;
+  flex: 1 100%;
+}
+
+.header {
+  background: tomato;
+  	height: 100px;
+	line-height:70px;
+}
+
+.main {
+  text-align: left;
+  background: deepskyblue;
+  text-align:center;
+  	height: 100px;
+	line-height:70px;
+}
+
+.aside-1 {
+	background: gold;
+	height: 100px;
+	text-align:center;
+		line-height:100px;
+}
+
+
+@media all and (min-width: 600px) {
+  .aside { flex: 1 auto; }
+}
+
+@media all and (min-width: 800px) {
+  .main    { flex: 3 0px; }
+}
+
+body {
+  padding: 2em; 
+}
+select{
+	background-color: orange;
+	width: 100px;
+	height: 25px;
+}
+input{
+	width: 100px;
+	height: 25px;
+}

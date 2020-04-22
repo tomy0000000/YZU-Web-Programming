@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>MONOPOLY</title>
+    <link rel="shortcut icon" href="./media/icon.png">
+    <link rel="stylesheet" type="text/css" href="s1061519.css">
+    <script src="s1061519.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <form action="#">
+            <input type="button" id="startButton" value="Start!">
+            <input type="button" id="resetButton" value="Reset">
+            <input type="button" id="diceButton" value="Roll Dice!" autofocus>
+        </form>
+    </div>
+    <div class="row">
+        <div id="info-col" class="column side-col">
+            <table id="info-tab">
+                <tr>
+                    <td>
+                        <div class="info-cel info-celfig">
+                            <img src="./media/blue-dot.png">
+                        </div>
+                        <div class="info-cel info-celtxt">
+                            <h1>Player 1</h1>
+                            <ul id="player1box">
+                                <li>Balance: </li>
+                                <li>Location: </li>
+                                <li>isBroke: </li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="info-cel info-celfig">
+                            <img src="./media/green-dot.png">
+                        </div>
+                        <div class="info-cel info-celtxt">
+                            <h1>Player 2</h1>
+                            <ul id="player2box">
+                                <li>Balance: </li>
+                                <li>Location: </li>
+                                <li>isBroke: </li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="info-cel info-celfig">
+                            <img src="./media/red-dot.png">
+                        </div>
+                        <div class="info-cel info-celtxt">
+                            <h1>Player 3</h1>
+                            <ul id="player3box">
+                                <li>Balance: </li>
+                                <li>Location: </li>
+                                <li>isBroke: </li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="info-cel info-celfig">
+                            <img src="./media/yellow-dot.png">
+                        </div>
+                        <div class="info-cel info-celtxt">
+                            <h1>Player 4</h1>
+                            <ul id="player4box">
+                                <li>Balance: </li>
+                                <li>Location: </li>
+                                <li>isBroke: </li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="game-col" class="column middle-col">
+            <!-- <img src="./media/blue-dot.png" id="mvFig" style="top: 652px; left: 555px;"> -->
+            <table id="game-tab">
+                <tr>
+                    <td class="h-def" colspan="8">
+                        <h1 id="playerTitle">Press Start to Play the Game</h1>
+                        <p id="player"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="w-big h-big" id="box10"></td>
+                    <td class="w-small h-big b-dismiss" id="box10-2"></td>
+                    <td class="w-def h-big" id="box11"></td>
+                    <td class="w-def h-big" id="box12"></td>
+                    <td class="w-def h-big" id="box13"></td>
+                    <td class="w-def h-big" id="box14"></td>
+                    <td class="w-small h-big b-dismiss" id="box15-1"></td>
+                    <td class="w-big h-big" id="box15"></td>
+                </tr>
+                <tr>
+                    <td class="w-big h-small b-dismiss" id="box10-1"></td>
+                    <td class="w-small h-small" id="building10"></td>
+                    <td class="w-def h-small" id="building11"></td>
+                    <td class="w-def h-small" id="building12"></td>
+                    <td class="w-def h-small" id="building13"></td>
+                    <td class="w-def h-small" id="building14"></td>
+                    <td class="w-small h-small" id="building15"></td>
+                    <td class="w-big h-small b-dismiss" id="box15-2"></td>
+                </tr>
+                <tr>
+                    <td class="w-big h-def" id="box9"></td>
+                    <td class="w-small h-def" id="building9"></td>
+                    <td class="" id="plaza" colspan="4" rowspan="4"></td>
+                    <td class="w-small h-def" id="building16"></td>
+                    <td class="w-big h-def" id="box16"></td>
+                </tr>
+                <tr>
+                    <td class="w-big h-def" id="box8"></td>
+                    <td class="w-small h-def" id="building8"></td>
+                    <td class="w-small h-def" id="building17"></td>
+                    <td class="w-big h-def" id="box17"></td>
+                </tr>
+                <tr>
+                    <td class="w-big h-def" id="box7"></td>
+                    <td class="w-small h-def" id="building7"></td>
+                    <td class="w-small h-def" id="building18"></td>
+                    <td class="w-big h-def" id="box18"></td>
+                </tr>
+                <tr>
+                    <td class="w-big h-def" id="box6"></td>
+                    <td class="w-small h-def" id="building6"></td>
+                    <td class="w-small h-def" id="building19"></td>
+                    <td class="w-big h-def" id="box19"></td>
+                </tr>
+                <tr>
+                    <td class="w-big h-small b-dismiss" id="box5-2"></td>
+                    <td class="w-small h-small" id="building5"></td>
+                    <td class="w-def h-small" id="building4"></td>
+                    <td class="w-def h-small" id="building3"></td>
+                    <td class="w-def h-small" id="building2"></td>
+                    <td class="w-def h-small" id="building1"></td>
+                    <td class="w-def h-def" id="box0" colspan="2" rowspan="2"></td>
+                </tr>
+                <tr>
+                    <td class="w-big h-big" id="box5"></td>
+                    <td class="w-small h-big b-dismiss" id="box5-1"></td>
+                    <td class="w-def h-big" id="box4"></td>
+                    <td class="w-def h-big" id="box3"></td>
+                    <td class="w-def h-big" id="box2"></td>
+                    <td class="w-def h-big" id="box1"></td>
+                </tr>
+            </table>
+        </div>
+        <div id="record-col" class="column side-col">
+            <h1>Game Record</h1>
+            <ul id="record-tab">
+                <!-- <li>Custom Player Name</li>
+                <li>Auto Sell When Broke</li>
+                <li>Walk Animation</li>
+                <li>Page Color Layout</li>
+                <li>Item</li>
+                <li>AdjustBalance</li>
+                <li>AdjustBoardData</li>
+                <li>TeleportToBox</li> -->
+            </ul>
+        </div>
+    </div>
+    <div class="footer"></div>
+</body>
+
+</html>
